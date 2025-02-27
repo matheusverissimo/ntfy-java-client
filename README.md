@@ -6,7 +6,7 @@ It provides a simple API for **sending notifications** and **subscribing to topi
 ## Features
 - ✅ **Send Notifications** to ntfy.sh with custom messages and parameters.
 - 🔄 **Subscribe to Topics** and listen for real-time notifications.
-- 🏗️ **Compatible with Java 8+**.
+- 🏗️ **Compatible with Java 11+**.
 
 ## Installation
 
