@@ -45,4 +45,11 @@
 		</dependency>
 
 	</dependencies>
+	
+	<distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/matheusverissimo/ntfy-java-client</url>
+        </repository>
+    </distributionManagement>
 </project>
