@@ -1,6 +1,6 @@
 package ntfyclient.constants;
 
-public abstract class NtfyPriority {
+public abstract class Priority {
 
 	public final static Integer MAX = 5;
 	public final static Integer HIGH = 4;

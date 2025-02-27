@@ -31,9 +31,8 @@ build/
 gradle-app.setting
 !gradle-wrapper.jar
 
-##############################
-## IntelliJ
-##############################
+# IntelliJ
+
 out/
 .idea/
 .idea_modules/
