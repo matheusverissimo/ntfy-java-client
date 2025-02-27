@@ -12,6 +12,13 @@
 		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.release>11</maven.compiler.release>
 	</properties>
+	
+	<developers>
+        <developer>
+            <name>Matheus Veríssimo</name>
+            <email>rodrigues.verissimo.matheus@gmail.com</email>
+        </developer>
+    </developers>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
