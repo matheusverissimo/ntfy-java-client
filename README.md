@@ -14,20 +14,11 @@ Add the following dependency to your **Maven** project:
 
 ```xml
 <dependency>
-    <groupId>com.github.matheusverissimo</groupId>
+    <groupId>io.github.matheusverissimo</groupId>
     <artifactId>ntfy-java-client</artifactId>
     <version>0.0.1</version>
 </dependency>
-
-<repositories>
-    <repository>
-        <id>github</id>
-        <url>https://maven.pkg.github.com/matheusverissimo/ntfy-java-client</url>
-    </repository>
-</repositories>
 ```
-
-We'll be working to deploy this library to Maven Central.
 
 ## Usage
 

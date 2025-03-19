@@ -6,7 +6,7 @@ import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.List;
 
-import ntfyclient.constants.Priority;
+import ntfyclient.Priority;
 
 public class Notification {
 

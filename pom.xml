@@ -3,22 +3,43 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.matheusverissimo</groupId>
+	<groupId>io.github.matheusverissimo</groupId>
 	<artifactId>ntfy-java-client</artifactId>
 	<version>0.0.1</version>
+
+	<name>ntfy-java-client</name>
+	<description>A minimal client to integrate with ntfy.sh notification system.</description>
+	<url>https://github.com/matheusverissimo/ntfy-java-client</url>
+
 
 	<properties>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.release>11</maven.compiler.release>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
+
 	<developers>
-        <developer>
-            <name>Matheus Veríssimo</name>
-            <email>rodrigues.verissimo.matheus@gmail.com</email>
-        </developer>
-    </developers>
+		<developer>
+			<name>Matheus Veríssimo</name>
+			<email>rodrigues.verissimo.matheus@gmail.com</email>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+
+	<scm>
+		<connection>
+			scm:git:git://github.com/matheusverissimo/ntfy-java-client.git</connection>
+		<developerConnection>
+			scm:git:ssh://github.com:matheusverissimo/ntfy-java-client.git</developerConnection>
+		<url>http://github.com/matheusverissimo/ntfy-java-client/tree/main</url>
+	</scm>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
@@ -52,11 +73,65 @@
 		</dependency>
 
 	</dependencies>
-	
-	<distributionManagement>
-        <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/matheusverissimo/ntfy-java-client</url>
-        </repository>
-    </distributionManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.3.0</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.6.3</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.sonatype.central</groupId>
+				<artifactId>central-publishing-maven-plugin</artifactId>
+				<version>0.7.0</version>
+				<extensions>true</extensions>
+				<configuration>
+					<publishingServerId>central</publishingServerId>
+					<autoPublish>true</autoPublish>
+					<waitUntil>uploaded</waitUntil>
+					<checksums>all</checksums>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
 </project>
