@@ -6,8 +6,6 @@ import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.List;
 
-import ntfyclient.Priority;
-
 public class Notification {
 
 	private String id;
@@ -18,7 +16,7 @@ public class Notification {
 	private String message;
 	private String title;
 	private List<String> tags = new ArrayList<>();
-	private Integer priority = Priority.DEFAULT;
+	private Priority priority = Priority.DEFAULT;
 	private String click;
 	private List<Action> actions = new ArrayList<>();
 	private Attachment attachment;
@@ -55,7 +53,7 @@ public class Notification {
 		return tags;
 	}
 
-	public Integer getPriority() {
+	public Priority getPriority() {
 		return priority;
 	}
 

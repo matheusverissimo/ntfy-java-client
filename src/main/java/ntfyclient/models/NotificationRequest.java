@@ -3,15 +3,13 @@ package ntfyclient.models;
 import java.util.ArrayList;
 import java.util.List;
 
-import ntfyclient.Priority;
-
 public class NotificationRequest {
 
 	private String topic;
 	private String message;
 	private String title;
 	private List<String> tags = new ArrayList<>();
-	private Integer priority = Priority.DEFAULT;
+	private Integer priority = Priority.DEFAULT.getPriorityCode();
 	private String attach;
 	private String filename;
 	private List<Action> actions = new ArrayList<>();
@@ -47,8 +45,8 @@ public class NotificationRequest {
 		return this;
 	}
 
-	public NotificationRequest priority(Integer priority) {
-		this.priority = priority;
+	public NotificationRequest priority(Priority priority) {
+		this.priority = priority.getPriorityCode();
 		return this;
 	}
 

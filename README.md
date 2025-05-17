@@ -1,6 +1,6 @@
 # ntfy-java-client
 
-🚀 **ntfy-java-client** is a lightweight Java library for interacting with [ntfy.sh](https://ntfy.sh).  
+**ntfy-java-client** is a lightweight Java library for interacting with [ntfy.sh](https://ntfy.sh).  
 It provides a simple API for **sending notifications** and **subscribing to topics**.
 
 ## Features
@@ -16,7 +16,7 @@ Add the following dependency to your **Maven** project:
 <dependency>
     <groupId>io.github.matheusverissimo</groupId>
     <artifactId>ntfy-java-client</artifactId>
-    <version>0.0.1</version>
+    <version>0.1.0</version>
 </dependency>
 ```
 
@@ -57,7 +57,7 @@ topic.subscribe(notification -> {
     log.info("Message received: {}", notification.getMessage());
 });
 
-topic.listen();
+topic.listenAndJoin();
 ```
 
 ## Contributing

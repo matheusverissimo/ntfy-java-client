@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.matheusverissimo</groupId>
 	<artifactId>ntfy-java-client</artifactId>
-	<version>0.0.1</version>
+	<version>0.1.0</version>
 
 	<name>ntfy-java-client</name>
 	<description>A minimal client to integrate with ntfy.sh notification system.</description>
@@ -13,8 +13,6 @@
 
 
 	<properties>
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.release>11</maven.compiler.release>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
